@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — STACKLY Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%235a63e8'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body class="dash-body" data-protected>
+  <div class="dash-shell">
+    <aside class="sidebar" id="appSidebar"></aside>
+    <div class="sidebar-backdrop"></div>
+    <main class="dash-main">
+      <header class="dash-header" id="appHeader"></header>
+      <div class="dash-content">
+        <div class="page-title">
+          <div>
+            <h1 data-user-greeting>Welcome back!</h1>
+            <p>Here's what's happening at STACKLY today.</p>
+          </div>
+          <div class="actions">
+            <a href="children.html" class="btn btn-soft btn-sm">+ Add Child</a>
+            <a href="activities.html" class="btn btn-sm">+ New Activity</a>
+          </div>
+        </div>
+
+        <div class="stat-cards">
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-sky">&#128118;</span><span class="trend up">+6%</span></div><div class="sc-val" data-count="74">0</div><div class="sc-lbl">Total Children</div></div>
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-mint">&#128104;&#8205;&#127891;</span><span class="trend up">+2</span></div><div class="sc-val" data-count="15">0</div><div class="sc-lbl">Active Staff</div></div>
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-yellow">&#10003;</span><span class="trend down">-3%</span></div><div class="sc-val" data-count="68">0</div><div class="sc-lbl">Today's Attendance</div></div>
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-lav">&#127912;</span><span class="trend up">+4</span></div><div class="sc-val" data-count="9">0</div><div class="sc-lbl">Upcoming Activities</div></div>
+        </div>
+
+        <div class="dash-grid cols-2" style="margin-bottom:20px">
+          <div class="panel">
+            <div class="panel-head"><div><h3>Weekly Attendance Trend</h3><p>Demonstration data · this week</p></div></div>
+            <div class="chart-box"><canvas id="weeklyChart"></canvas></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><h3>Age Group Distribution</h3><p>Demonstration data</p></div></div>
+            <div class="chart-box"><canvas id="ageChart"></canvas></div>
+          </div>
+        </div>
+
+        <div class="dash-grid cols-2" style="margin-bottom:20px">
+          <div class="panel">
+            <div class="panel-head"><h3>Recent Registrations</h3><a href="children.html" class="link" style="font-size:.85rem">View all</a></div>
+            <ul class="list-clean">
+              <li><img src="https://i.pravatar.cc/80?u=child1" alt="" loading="lazy"><div class="li-main"><strong>Aarav Sharma</strong><small>Toddler Care · enrolled today</small></div><span class="pill green">New</span></li>
+              <li><img src="https://i.pravatar.cc/80?u=child2" alt="" loading="lazy"><div class="li-main"><strong>Mia Fernandes</strong><small>Infant Care · enrolled today</small></div><span class="pill green">New</span></li>
+              <li><img src="https://i.pravatar.cc/80?u=child3" alt="" loading="lazy"><div class="li-main"><strong>Noah Patel</strong><small>Preschool · enrolled yesterday</small></div><span class="pill blue">Review</span></li>
+              <li><img src="https://i.pravatar.cc/80?u=child4" alt="" loading="lazy"><div class="li-main"><strong>Sara Khan</strong><small>After-School Care · enrolled yesterday</small></div><span class="pill blue">Review</span></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h3>Today's Attendance</h3><a href="attendance.html" class="link" style="font-size:.85rem">Manage</a></div>
+            <div class="grid grid-3" style="gap:12px;margin-bottom:18px">
+              <div class="center"><div class="sc-val" style="color:#1f9d6b" data-count="62">0</div><small class="muted">Present</small></div>
+              <div class="center"><div class="sc-val" style="color:#b8791a" data-count="6">0</div><small class="muted">Late</small></div>
+              <div class="center"><div class="sc-val" style="color:#e0394d" data-count="6">0</div><small class="muted">Absent</small></div>
+            </div>
+            <div style="font-size:.85rem;color:var(--muted);margin-bottom:6px">Overall attendance &mdash; <strong style="color:var(--ink)">89%</strong></div>
+            <div class="progress"><span style="width:89%"></span></div>
+          </div>
+        </div>
+
+        <div class="dash-grid cols-2">
+          <div class="panel">
+            <div class="panel-head"><h3>Upcoming Activities</h3><a href="activities.html" class="link" style="font-size:.85rem">View all</a></div>
+            <ul class="list-clean">
+              <li><span class="ni-icon ib-peach">&#127912;</span><div class="li-main"><strong>Finger Painting Fun</strong><small>10:00 AM · Daniel Coates</small></div><span class="li-time">Tomorrow</span></li>
+              <li><span class="ni-icon ib-sky">&#128214;</span><div class="li-main"><strong>Story Circle</strong><small>11:30 AM · Priya Menon</small></div><span class="li-time">Tomorrow</span></li>
+              <li><span class="ni-icon ib-mint">&#127794;</span><div class="li-main"><strong>Outdoor Play</strong><small>9:00 AM · Rahul Verma</small></div><span class="li-time">Wed</span></li>
+              <li><span class="ni-icon ib-lav">&#127925;</span><div class="li-main"><strong>Rhythm &amp; Rhyme</strong><small>2:00 PM · Grace Osei</small></div><span class="li-time">Wed</span></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h3>Recent Notifications</h3></div>
+            <ul class="list-clean">
+              <li><span class="ni-icon ib-mint">&#10003;</span><div class="li-main"><strong>Aarav checked in</strong><small>08:42 AM</small></div><span class="li-time">10m</span></li>
+              <li><span class="ni-icon ib-yellow">&#9873;</span><div class="li-main"><strong>Term fee reminder</strong><small>Due on the 20th</small></div><span class="li-time">1h</span></li>
+              <li><span class="ni-icon ib-sky">&#9993;</span><div class="li-main"><strong>New enquiry received</strong><small>From Michelle R.</small></div><span class="li-time">3h</span></li>
+              <li><span class="ni-icon ib-lav">&#128197;</span><div class="li-main"><strong>Parent-teacher day</strong><small>Scheduled for Fri</small></div><span class="li-time">1d</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

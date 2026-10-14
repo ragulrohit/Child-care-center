@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance — STACKLY Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%235a63e8'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body class="dash-body" data-protected>
+  <div class="dash-shell">
+    <aside class="sidebar" id="appSidebar"></aside>
+    <div class="sidebar-backdrop"></div>
+    <main class="dash-main">
+      <header class="dash-header" id="appHeader"></header>
+      <div class="dash-content">
+        <div class="page-title">
+          <div><h1>Attendance</h1><p>Track daily check-ins across every classroom.</p></div>
+          <div class="actions">
+            <button class="btn btn-soft btn-sm" id="exportAttCsv">Export CSV</button>
+            <button class="btn btn-sm" id="markAttBtn">Mark Attendance</button>
+          </div>
+        </div>
+
+        <div class="stat-cards">
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-mint">&#10003;</span></div><div class="sc-val" data-att-present>0</div><div class="sc-lbl">Present</div></div>
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-yellow">&#9201;</span></div><div class="sc-val" data-att-late>0</div><div class="sc-lbl">Late</div></div>
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-peach">&#10007;</span></div><div class="sc-val" data-att-absent>0</div><div class="sc-lbl">Absent</div></div>
+          <div class="stat-card"><div class="sc-top"><span class="sc-icon ib-sky">&#128202;</span></div><div class="sc-val" data-att-pct>0%</div><div class="sc-lbl">Attendance rate</div></div>
+        </div>
+
+        <div class="panel" style="margin-bottom:20px">
+          <div class="toolbar attendance-toolbar" style="margin-bottom:0">
+            <div class="field" style="margin:0"><label style="font-size:.8rem">Date</label>
+              <select class="select mini date-input" id="attDate" aria-label="Select attendance date">
+                <option value="2026-10-13" selected>13 Oct 2026</option>
+                <option value="2026-10-12">12 Oct 2026</option>
+                <option value="2026-10-11">11 Oct 2026</option>
+                <option value="2026-10-10">10 Oct 2026</option>
+                <option value="2026-10-09">09 Oct 2026</option>
+              </select>
+            </div>
+            <div class="field" style="margin:0"><label style="font-size:.8rem">Classroom</label>
+              <select class="select mini" id="attRoom" aria-label="Filter by classroom">
+                <option value="all">All classrooms</option>
+                <option>Sunflower Room</option><option>Tulip Room</option><option>Daisy Room</option>
+              </select>
+            </div>
+            <div class="search"><span class="ic">&#128269;</span><input id="attSearch" type="search" placeholder="Search child..."></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Attendance record</h3><div style="min-width:180px"><div class="progress"><span data-att-bar style="width:0"></span></div></div></div>
+          <div class="table-wrap" style="border:none">
+            <table class="data" style="min-width:600px">
+              <thead><tr><th>Child</th><th>Classroom</th><th>Check-in</th><th>Status</th></tr></thead>
+              <tbody id="attBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — STACKLY Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%235a63e8'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body class="dash-body" data-protected>
+  <div class="dash-shell">
+    <aside class="sidebar" id="appSidebar"></aside>
+    <div class="sidebar-backdrop"></div>
+    <main class="dash-main">
+      <header class="dash-header" id="appHeader"></header>
+      <div class="dash-content">
+        <div class="page-title"><div><h1>Settings</h1><p>Manage your profile, centre details and preferences.</p></div></div>
+
+        <div class="dash-grid settings-layout">
+          <div class="panel settings-nav">
+            <button class="active" data-pane="paneProfile">Profile Settings</button>
+            <button data-pane="paneCenter">Center Information</button>
+            <button data-pane="paneNotif">Notification Settings</button>
+            <button data-pane="paneAppearance">Appearance</button>
+            <button data-pane="paneAccount">Account Settings</button>
+          </div>
+
+          <div>
+            <!-- Profile -->
+            <div class="panel settings-pane active" id="paneProfile">
+              <div class="panel-head"><h3>Profile Settings</h3></div>
+              <form data-validate-form data-success-title="Profile saved" data-success-msg="Your profile details were updated." novalidate>
+                <div class="grid grid-2" style="gap:0 18px">
+                  <div class="field"><label>Name <span class="req">*</span></label><input class="input" name="name" data-rules="required|min:2" data-label="Name" placeholder="Your name"><div class="msg"></div></div>
+                  <div class="field"><label>Email <span class="req">*</span></label><input class="input" name="email" data-rules="required|email" data-label="Email" placeholder="you@stackly.com"><div class="msg"></div></div>
+                  <div class="field"><label>Phone</label><input class="input" name="phone" data-rules="phone" data-label="Phone" placeholder="+1 555 000 0000"><div class="msg"></div></div>
+                </div>
+                <button class="btn" type="submit">Save Changes</button>
+              </form>
+            </div>
+
+            <!-- Center -->
+            <div class="panel settings-pane" id="paneCenter">
+              <div class="panel-head"><h3>Center Information</h3></div>
+              <form data-validate-form data-success-title="Center info saved" data-success-msg="Center details were updated." novalidate>
+                <div class="field"><label>Center name <span class="req">*</span></label><input class="input" name="center" data-rules="required|min:2" data-label="Center name" value="STACKLY Child Care Center"><div class="msg"></div></div>
+                <div class="field"><label>Address <span class="req">*</span></label><input class="input" name="address" data-rules="required" data-label="Address" value="24 Sunflower Lane, Greenwood, CA 90210"><div class="msg"></div></div>
+                <div class="grid grid-2" style="gap:0 18px">
+                  <div class="field"><label>Contact phone <span class="req">*</span></label><input class="input" name="phone" data-rules="required|phone" data-label="Contact phone" value="+1 (555) 018-2200"><div class="msg"></div></div>
+                  <div class="field"><label>Contact email <span class="req">*</span></label><input class="input" name="email" data-rules="required|email" data-label="Contact email" value="hello@stackly.com"><div class="msg"></div></div>
+                </div>
+                <button class="btn" type="submit">Save Changes</button>
+              </form>
+            </div>
+
+            <!-- Notifications -->
+            <div class="panel settings-pane" id="paneNotif">
+              <div class="panel-head"><h3>Notification Settings</h3></div>
+              <div class="setting-row"><div class="sr-txt"><strong>Email notifications</strong><small>Receive updates and summaries by email.</small></div><label class="switch"><input type="checkbox" checked aria-label="Email notifications"></label></div>
+              <div class="setting-row"><div class="sr-txt"><strong>Activity reminders</strong><small>Get reminded about upcoming activities.</small></div><label class="switch"><input type="checkbox" checked aria-label="Activity reminders"></label></div>
+              <div class="setting-row"><div class="sr-txt"><strong>Attendance alerts</strong><small>Alert when a child is absent or late.</small></div><label class="switch"><input type="checkbox" aria-label="Attendance alerts"></label></div>
+            </div>
+
+            <!-- Appearance -->
+            <div class="panel settings-pane" id="paneAppearance">
+              <div class="panel-head"><h3>Appearance</h3></div>
+              <div class="setting-row"><div class="sr-txt"><strong>Dark theme</strong><small>Switch the dashboard to a darker palette.</small></div><label class="switch"><input type="checkbox" id="themeToggle" aria-label="Dark theme"></label></div>
+            </div>
+
+            <!-- Account -->
+            <div class="panel settings-pane" id="paneAccount">
+              <div class="panel-head"><h3>Account Settings</h3></div>
+              <form data-validate-form data-success-title="Password updated" data-success-msg="Your password was changed successfully." novalidate>
+                <div class="field"><label>Current password <span class="req">*</span></label><input class="input" type="password" name="current" data-rules="required|min:6" data-label="Current password"><div class="msg"></div></div>
+                <div class="field"><label>New password <span class="req">*</span></label><input class="input" type="password" name="newpass" data-rules="required|min:6" data-label="New password"><div class="msg"></div></div>
+                <div class="field"><label>Confirm new password <span class="req">*</span></label><input class="input" type="password" name="confirm" data-rules="required|match:newpass" data-label="Confirm password"><div class="msg"></div></div>
+                <button class="btn" type="submit">Change Password</button>
+              </form>
+              <div class="setting-row" style="margin-top:16px"><div class="sr-txt"><strong>Danger zone</strong><small>Log out of this session safely.</small></div><button class="btn btn-danger btn-sm" data-logout>Logout</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

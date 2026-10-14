@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff — STACKLY Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%235a63e8'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body class="dash-body" data-protected>
+  <div class="dash-shell">
+    <aside class="sidebar" id="appSidebar"></aside>
+    <div class="sidebar-backdrop"></div>
+    <main class="dash-main">
+      <header class="dash-header" id="appHeader"></header>
+      <div class="dash-content">
+        <div class="page-title">
+          <div><h1>Staff</h1><p>Manage caregivers, teachers and their assignments.</p></div>
+          <div class="actions"><button class="btn btn-sm" id="addStaffBtn">+ Add Staff</button></div>
+        </div>
+
+        <div class="toolbar">
+          <div class="search"><span class="ic">&#128269;</span><input id="staffSearch" type="search" placeholder="Search by name or email..."></div>
+          <select class="select mini" id="staffRoleFilter" aria-label="Filter by role">
+            <option value="all">All roles</option>
+            <option>Lead Teacher</option><option>Assistant Teacher</option><option>Caregiver</option><option>Child Psychologist</option><option>Administrator</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data staff-table">
+            <thead><tr><th>Staff member</th><th>Role</th><th>Experience</th><th>Classroom</th><th>Availability</th><th>Actions</th></tr></thead>
+            <tbody id="staffBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore STACKLY child care programs — Infant Care, Toddler Care, Preschool, Early Learning, After-School Care and Creative Activities.">
+  <title>Programs — STACKLY Child Care Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%235a63e8'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo" aria-label="STACKLY home"><img class="brand-logo-img" src="../images/Stackly_logo_clean.png" alt="STACKLY"></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html" class="active">Programs</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-soft btn-sm">Login</a>
+        <a href="signup.html" class="btn btn-sm">Sign Up</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="reveal-left">
+        <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Programs</span></div>
+        <span class="eyebrow">Our Programs</span>
+        <h1 style="font-size:clamp(2rem,4vw,3rem)">A program for every little milestone</h1>
+        <p class="lead mt-2">Six thoughtfully designed programs that grow with your child — from first smiles to school-ready confidence.</p>
+      </div>
+      <div class="hero-media reveal-right">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=70" alt="Children participating in an age-appropriate learning activity" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FILTER + CARDS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Find Your Fit</span>
+        <h2>Browse by age group</h2>
+      </div>
+
+      <div class="chip-row reveal" style="justify-content:center;margin-bottom:38px" data-filter-group data-filter-target="#programGrid">
+        <button class="chip active" data-filter="all">All Programs</button>
+        <button class="chip" data-filter="infant">Infants</button>
+        <button class="chip" data-filter="toddler">Toddlers</button>
+        <button class="chip" data-filter="preschool">Preschool</button>
+        <button class="chip" data-filter="school">School Age</button>
+      </div>
+
+      <div class="grid grid-3 stagger" id="programGrid" data-filter-list>
+        <article class="card reveal" data-filter-item="infant">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=700&q=70" alt="Infant care" loading="lazy"></div>
+          <div class="card-body"><span class="tag">6 wks – 12 mo</span><h3 class="mt-1">Infant Care</h3>
+            <p>Gentle routines, sensory play and warm one-to-one attention in a calm, safe nursery.</p>
+            <p class="muted mt-1" style="font-size:.85rem"><strong>Activities:</strong> tummy time, music, sensory baskets, story snuggles.</p>
+            <div class="card-actions"><a href="contact.html" class="btn btn-soft btn-sm">View Details</a><a href="signup.html" class="btn btn-sm">Enroll</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-filter-item="toddler">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=700&q=70" alt="Toddler care" loading="lazy"></div>
+          <div class="card-body"><span class="tag mint">1 – 3 yrs</span><h3 class="mt-1">Toddler Care</h3>
+            <p>Active days filled with movement, messy play and the first friendships.</p>
+            <p class="muted mt-1" style="font-size:.85rem"><strong>Activities:</strong> finger painting, water play, building blocks, dancing.</p>
+            <div class="card-actions"><a href="contact.html" class="btn btn-soft btn-sm">View Details</a><a href="signup.html" class="btn btn-sm">Enroll</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-filter-item="preschool">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=700&q=70" alt="Preschool program" loading="lazy"></div>
+          <div class="card-body"><span class="tag lav">3 – 5 yrs</span><h3 class="mt-1">Preschool</h3>
+            <p>Early literacy and numeracy woven into projects, games and group discovery.</p>
+            <p class="muted mt-1" style="font-size:.85rem"><strong>Activities:</strong> phonics, counting games, gardening, show-and-tell.</p>
+            <div class="card-actions"><a href="contact.html" class="btn btn-soft btn-sm">View Details</a><a href="signup.html" class="btn btn-sm">Enroll</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-filter-item="preschool">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=700&q=70" alt="Early learning program" loading="lazy"></div>
+          <div class="card-body"><span class="tag peach">2 – 4 yrs</span><h3 class="mt-1">Early Learning</h3>
+            <p>A gentle bridge between home and structured learning with plenty of play.</p>
+            <p class="muted mt-1" style="font-size:.85rem"><strong>Activities:</strong> shapes &amp; colours, puzzles, mini science, movement.</p>
+            <div class="card-actions"><a href="contact.html" class="btn btn-soft btn-sm">View Details</a><a href="signup.html" class="btn btn-sm">Enroll</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-filter-item="school">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=700&q=70" alt="After-school care" loading="lazy"></div>
+          <div class="card-body"><span class="tag">5 – 10 yrs</span><h3 class="mt-1">After-School Care</h3>
+            <p>Homework help, healthy snacks and active fun after the school bell rings.</p>
+            <p class="muted mt-1" style="font-size:.85rem"><strong>Activities:</strong> homework club, sports, board games, creative hour.</p>
+            <div class="card-actions"><a href="contact.html" class="btn btn-soft btn-sm">View Details</a><a href="signup.html" class="btn btn-sm">Enroll</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-filter-item="school preschool toddler">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1560421683-6856ea585c78?auto=format&fit=crop&w=700&q=70" alt="Creative activities program" loading="lazy"></div>
+          <div class="card-body"><span class="tag mint">3 – 8 yrs</span><h3 class="mt-1">Creative Activities</h3>
+            <p>Art, music, drama and making — where imagination leads the way.</p>
+            <p class="muted mt-1" style="font-size:.85rem"><strong>Activities:</strong> painting, clay, music, drama, recycled crafts.</p>
+            <div class="card-actions"><a href="contact.html" class="btn btn-soft btn-sm">View Details</a><a href="signup.html" class="btn btn-sm">Enroll</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INQUIRY FORM ============ -->
+  <section class="section" style="background:#fff">
+    <div class="container grid grid-2" style="gap:50px;align-items:center">
+      <div class="reveal-left">
+        <span class="eyebrow">Still Deciding?</span>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.4rem)">Ask us anything about our programs</h2>
+        <p class="lead mt-2">Not sure which program suits your child? Send us a quick note and our team will recommend the perfect fit.</p>
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=700&q=70" alt="Caregiver helping children with an activity" loading="lazy" style="border-radius:24px;box-shadow:var(--shadow);margin-top:24px;aspect-ratio:16/9;object-fit:cover">
+      </div>
+      <div class="form-card reveal-right">
+        <h3>Program Inquiry</h3>
+        <p class="muted mb-2" style="font-size:.9rem">We usually reply within one business day.</p>
+        <form data-validate-form novalidate>
+          <div class="field"><label>Parent name <span class="req">*</span></label><input class="input" name="pname" data-rules="required|min:2" data-label="Parent name"><div class="msg"></div></div>
+          <div class="field"><label>Email <span class="req">*</span></label><input class="input" name="email" type="email" data-rules="required|email" data-label="Email"><div class="msg"></div></div>
+          <div class="field"><label>Interested program <span class="req">*</span></label>
+            <select class="select" name="program" data-rules="required" data-label="Program">
+              <option value="">Select a program</option>
+              <option>Infant Care</option><option>Toddler Care</option><option>Preschool</option>
+              <option>Early Learning</option><option>After-School Care</option><option>Creative Activities</option>
+            </select><div class="msg"></div></div>
+          <div class="field"><label>Message <span class="req">*</span></label><textarea class="textarea" name="message" data-rules="required|min:10" data-label="Message" placeholder="Tell us a little about your child..."></textarea><div class="msg"></div></div>
+          <button class="btn btn-block" type="submit">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" aria-label="STACKLY home"><img class="brand-logo-img" src="../images/Stackly_logo_clean.png" alt="STACKLY"></a>
+          <p style="font-size:.92rem">Little Steps, Bright Futures. A nurturing child care centre built around safety, play and joyful learning.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l1-4h-4V6.5c0-1 .3-1.5 1.6-1.5H18V1.6C17.4 1.5 16.2 1.4 15 1.4c-2.8 0-4.6 1.7-4.6 4.8V9H7v4h3.4v9H13z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L4 21H1l7.5-8.6L.6 3h6.6l4.5 5.5L17.5 3z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.2-.8-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.9-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.8.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.9 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a><a href="facilities.html">Facilities</a></div>
+        <div><h4>Support</h4><a href="contact.html">Contact Us</a><a href="login.html">Parent Login</a><a href="signup.html">Enroll Now</a><a href="404.html">Help Center</a></div>
+        <div><h4>Visit Us</h4><p style="font-size:.92rem">24 Sunflower Lane,<br>Greenwood, CA 90210</p><p style="font-size:.92rem;margin-top:10px">&#9742; +1 (555) 018-2200<br>&#9993; hello@stackly.com</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span data-year>2026</span> STACKLY Child Care Center. All rights reserved. &middot; Little Steps, Bright Futures.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

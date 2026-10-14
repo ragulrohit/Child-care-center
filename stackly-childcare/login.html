@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to your STACKLY parent account to view your child's dashboard.">
+  <title>Login — STACKLY Child Care Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%235a63e8'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body class="auth-body">
+
+  <a href="index.html" class="back-home">&larr; Back to Home</a>
+
+  <main class="auth-shell">
+    <!-- ===== Left visual ===== -->
+    <section class="auth-visual">
+      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1000&q=70" alt="Children with a professional caregiver in a safe classroom" loading="eager">
+      <a href="index.html" class="logo" aria-label="STACKLY home"><img class="brand-logo-img" src="../images/Stackly_logo_clean.png" alt="STACKLY"></a>
+      <h2 class="mobile-tag">Little Steps, Bright Futures.</h2>
+      <div class="auth-visual-copy">
+        <h2>Little Steps, Bright Futures.</h2>
+        <p>Welcome back to the STACKLY family dashboard — where you can follow your child's day, progress and upcoming activities.</p>
+        <ul class="auth-points">
+          <li><span class="tick">&#10003;</span> Daily activity updates</li>
+          <li><span class="tick">&#10003;</span> Attendance &amp; progress tracking</li>
+          <li><span class="tick">&#10003;</span> Secure, private parent access</li>
+        </ul>
+      </div>
+      <div class="auth-quote">
+        "STACKLY gives us total peace of mind while we work — our little one is thriving."
+        <strong>&mdash; Ananya, parent of Aarav (3)</strong>
+      </div>
+    </section>
+
+    <!-- ===== Right form ===== -->
+    <section class="auth-form-side">
+      <div class="auth-card">
+        <a href="index.html" class="logo mobile-logo" aria-label="STACKLY home"><img class="brand-logo-img" src="../images/Stackly_logo_clean.png" alt="STACKLY"></a>
+        <h1>Welcome Back!</h1>
+        <p class="sub">Log in to your parent account to continue.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label>Select Role</label>
+            <div class="role-switch" data-role-switch>
+              <span class="role-slider" aria-hidden="true"></span>
+              <button type="button" class="role-option active" data-role="parent">Parent</button>
+              <button type="button" class="role-option" data-role="staff">Staff</button>
+            </div>
+            <input type="hidden" id="loginRole" name="role" value="parent">
+          </div>
+          <div class="field">
+            <label for="loginEmail">Email Address</label>
+            <input class="input" type="email" id="loginEmail" name="email" placeholder="you@example.com" autocomplete="email" data-rules="required|email" data-label="Email">
+            <div class="msg"></div>
+          </div>
+          <div class="field">
+            <label for="loginPassword">Password</label>
+            <div class="pw-wrap">
+              <input class="input" type="password" id="loginPassword" name="password" placeholder="Enter your password" autocomplete="current-password" data-rules="required|min:6" data-label="Password">
+              <button type="button" class="pw-toggle" data-pw-toggle="loginPassword" aria-label="Show password">&#128065;</button>
+            </div>
+            <div class="msg"></div>
+          </div>
+
+          <div class="auth-row">
+            <label class="checkbox"><input type="checkbox" id="rememberMe"><span>Remember Me</span></label>
+            <a href="#" class="link" id="forgotLink">Forgot Password?</a>
+          </div>
+
+          <button class="btn btn-block" type="submit">Login</button>
+        </form>
+
+        <div class="divider">OR</div>
+
+        <button class="google-btn" data-google>
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+            <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+            <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+            <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+          </svg>
+          Continue with Google
+        </button>
+
+        <p class="auth-alt">Don't have an account? <a href="signup.html" class="link">Sign Up</a></p>
+        <p class="auth-alt" style="margin-top:10px;font-size:.78rem;color:var(--muted)">Demo only — authentication is simulated in the browser and is not secure. Google sign-in requires OAuth configuration.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.getElementById("forgotLink") && document.getElementById("forgotLink").addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "404.html";
+    });
+  </script>
+</body>
+</html>

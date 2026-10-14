@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your STACKLY parent account and start your child's bright future.">
+  <title>Sign Up — STACKLY Child Care Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%235a63e8'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body class="auth-body">
+
+  <a href="index.html" class="back-home">&larr; Back to Home</a>
+
+  <main class="auth-shell">
+    <!-- ===== Left visual ===== -->
+    <section class="auth-visual">
+      <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=70" alt="Caregivers and children learning together" loading="eager">
+      <a href="index.html" class="logo" aria-label="STACKLY home"><img class="brand-logo-img" src="../images/Stackly_logo_clean.png" alt="STACKLY"></a>
+      <h2 class="mobile-tag">Little Steps, Bright Futures.</h2>
+      <div class="auth-visual-copy">
+        <h2>Little Steps, Bright Futures.</h2>
+        <p>Join hundreds of local families who trust STACKLY with their children's earliest and most important years.</p>
+        <ul class="auth-points">
+          <li><span class="tick">&#10003;</span> Simple two-minute sign up</li>
+          <li><span class="tick">&#10003;</span> Flexible full &amp; part-time care</li>
+          <li><span class="tick">&#10003;</span> Cancel or change anytime</li>
+        </ul>
+      </div>
+      <div class="auth-quote">
+        "Signing up was effortless and the team welcomed us like family from day one."
+        <strong>&mdash; Marcus, father of Mia (2)</strong>
+      </div>
+    </section>
+
+    <!-- ===== Right form ===== -->
+    <section class="auth-form-side">
+      <div class="auth-card">
+        <a href="index.html" class="logo mobile-logo" aria-label="STACKLY home"><img class="brand-logo-img" src="../images/Stackly_logo_clean.png" alt="STACKLY"></a>
+        <h1>Create Your Account</h1>
+        <p class="sub">It only takes a minute to get started.</p>
+
+        <form id="signupForm" novalidate>
+          <div class="field">
+            <label>Select Role</label>
+            <div class="role-switch" data-role-switch>
+              <span class="role-slider" aria-hidden="true"></span>
+              <button type="button" class="role-option active" data-role="parent">Parent</button>
+              <button type="button" class="role-option" data-role="staff">Staff</button>
+            </div>
+            <input type="hidden" id="signupRole" name="role" value="parent">
+          </div>
+          <div class="field">
+            <label for="signupName">Full Name</label>
+            <input class="input" type="text" id="signupName" name="name" placeholder="Jane Doe" autocomplete="name" data-rules="required|min:2" data-label="Full name">
+            <div class="msg"></div>
+          </div>
+          <div class="field">
+            <label for="signupEmail">Email Address</label>
+            <input class="input" type="email" id="signupEmail" name="email" placeholder="you@example.com" autocomplete="email" data-rules="required|email" data-label="Email">
+            <div class="msg"></div>
+          </div>
+          <div class="field">
+            <label for="signupPhone">Phone Number</label>
+            <input class="input" type="tel" id="signupPhone" name="phone" placeholder="+1 555 000 0000" autocomplete="tel" data-rules="required|phone" data-label="Phone number">
+            <div class="msg"></div>
+          </div>
+          <div class="field">
+            <label for="signupPassword">Password</label>
+            <div class="pw-wrap">
+              <input class="input" type="password" id="signupPassword" name="password" placeholder="Create a password" autocomplete="new-password" data-rules="required|min:6" data-label="Password">
+              <button type="button" class="pw-toggle" data-pw-toggle="signupPassword" aria-label="Show password">&#128065;</button>
+            </div>
+            <div class="pw-strength"><span id="pwBar"></span></div>
+            <div class="pw-hint" id="pwHint">Use 8+ characters with a number and symbol for a strong password.</div>
+            <div class="msg"></div>
+          </div>
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="pw-wrap">
+              <input class="input" type="password" id="confirmPassword" name="confirm" placeholder="Re-enter your password" autocomplete="new-password" data-rules="required|match:password" data-label="Confirm password">
+              <button type="button" class="pw-toggle" data-pw-toggle="confirmPassword" aria-label="Show password">&#128065;</button>
+            </div>
+            <div class="msg"></div>
+          </div>
+
+          <div class="field">
+            <label class="checkbox terms-checkbox" style="display:flex;align-items:center;flex-wrap:nowrap;white-space:nowrap">
+              <input type="checkbox" id="terms" name="terms" data-rules="checked" data-label="Terms">
+              <span>I agree to <a href="#" class="link">Terms &amp; Privacy Policy</a>.</span>
+            </label>
+            <div class="msg"></div>
+          </div>
+
+          <button class="btn btn-block" type="submit">Create Account</button>
+        </form>
+
+        <div class="divider">OR</div>
+
+        <button class="google-btn" data-google>
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+            <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+            <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+            <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+          </svg>
+          Continue with Google
+        </button>
+
+        <p class="auth-alt">Already have an account? <a href="login.html" class="link">Login</a></p>
+        <p class="auth-alt" style="margin-top:10px;font-size:.78rem;color:var(--muted)">Demo only — credentials are stored in your browser for demonstration and are not secure. Do not use a real password.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
